@@ -1,1 +1,71 @@
-/home/zed/.lyx/layouts/frontespizio.module
+#\DeclareLyXModule{Frontespizio}
+#DescriptionBegin
+# generate a frontispiece for italian thesis, from graduation to Ph.D. \\
+# see also http://www.ctan.org/tex-archive/macros/latex/contrib/frontespizio \\
+# Author: Vito De Tullio
+#DescriptionEnd
+
+
+Format 11
+
+AddToPreamble
+    \usepackage{frontespizio}
+EndPreamble
+
+ClassOptions
+    Other titlepage
+End
+
+InsetLayout Frontespizio
+    LatexName frontespizio
+    LatexType environment
+    LyxType custom
+    LabelString Frontespizio
+    MultiPar true
+End
+
+Style Universita
+    LatexName Universita
+    LabelString "Università:"
+    Category Frontespizio
+    LatexType command
+    LabelType Static
+    Labelsep "1cm"
+    Margin Dynamic
+End
+
+Style Facolta
+    CopyStyle Universita
+    LatexName Facolta
+    LabelString "Facoltà:"
+End
+
+Style Titoletto
+    CopyStyle Universita
+    LatexName Titoletto
+    LabelString "Titoletto:"
+End
+
+Style Titolo
+    CopyStyle Universita
+    LatexName Titolo
+    LabelString "Titolo:"
+End
+
+Style Relatore
+    CopyStyle Universita
+    LatexName Relatore
+    LabelString "Relatore:"
+End
+
+Style Correlatore
+    CopyStyle Universita
+    LatexName Correlatore
+    LabelString "Correlatore:"
+End
+
+Style Annoaccademico
+    CopyStyle Universita
+    LatexName Annoaccademico
+    LabelString "Anno accademico:"
+End
