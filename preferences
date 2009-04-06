@@ -1,0 +1,5 @@
+# this file is supposed to be appended to lyx preference file (normally ~/.lyx/prefereces)
+
+\format "frontispiece" "" "Frontespizio" "" "" "" "document"
+\converter "frontispiece" "pdflatex" "lyx -e pdflatex \"$$i.lyx\" && pdflatex \"$$o\" && pdflatex \"$$i-fnt.tex\" && pdflatex \"$$o\"" ""
+

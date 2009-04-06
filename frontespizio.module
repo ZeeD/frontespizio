@@ -6,14 +6,15 @@
 #DescriptionEnd
 
 Format 11
+OutputType frontispiece
+
+ClassOptions
+    Other "titlepage"
+End
 
 AddToPreamble
     \usepackage{frontespizio}
 EndPreamble
-
-ClassOptions
-    Other titlepage
-End
 
 InsetLayout Frontespizio
     LatexName frontespizio
